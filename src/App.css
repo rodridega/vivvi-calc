@@ -1,38 +1,262 @@
+@font-face {
+  font-family: "roboto";
+  src: url("./styles/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "robotoLight";
+  src: url("./styles/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: "bigShoulder";
+  src: url("./styles/fonts/static/BigShouldersDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: "bigShoulderSB";
+  src: url("./styles/fonts/static/BigShouldersDisplay-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "bigShoulderM";
+  src: url("./styles/fonts/static/BigShouldersDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: "oswald";
+  src: url("./styles/fonts/static/Oswald-Regular.ttf");
+}
+
 .App {
+  height: 100vh;
+  background-image: url("/src/assets/COCINA03_JPEG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.left-box {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px 0px 0px 10px;
+  padding: 2em;
+  width: 40%;
+}
+
+.right-box {
+  background-color: rgba(235, 201, 145, 1);
+  padding: 5em;
+  border-radius: 0px 10px 10px 0px;
+  width: 60%;
+}
+
+.left-box__sub {
+  background-color: rgba(235, 201, 145, 1);
+  padding: 0.5em;
+  font-family: "roboto";
+  font-size: 16px;
+  border-radius: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left-box__title {
+  font-family: "bigShoulder";
+  font-size: 55px;
+  color: #254A46;
+  animation: transform-title;
+  animation-duration: 1s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.left-box__title-result {
+  color: #254A46;
+  font-size: 24px;
+  font-family: "bigShoulder";
+  animation-name: transform-title-result;
+  animation-duration: 0.5s;
+}
+
+.left-box__text {
+  font-family: "robotoLight";
+  font-size: 16px;
+}
+
+.left-box__text-result {
+  font-family: "bigShoulder";
+  font-size: 50px;
+  color: #254A46;
+}
+
+.right-box__title {
+  font-family: "bigShoulderSB";
+  font-size: 38.6px;
+  color: #254A46;
+}
+
+.right-box__sub {
+  font-family: "bigShoulderM";
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn-vivvi {
+  background-color: #254A46;
+  color: #EBC991;
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-vivvi:hover {
+  background-color: #203F3C !important;
+  color: #EBC991 !important;
+  transform: scale(1.1);
+}
+
+.resultado__title {
+  font-family: "bigShoulderSB";
+  font-size: 28.25px;
+  color: #254A46;
+  text-align: center;
+}
+
+.resultado__sub {
+  font-family: "bigShoulderM";
+  font-size: 15.69px;
+  text-align: center;
+  color: rgba(32, 63, 60, .5);
+}
+
+.resultado__total {
+  color: #203F3C;
+  font-family: "oswald";
+  font-size: 38px;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.form-control {
+  animation: big-input;
+  animation-duration: 1s;
+}
+
+
+.form-control:disabled {
+  background-color: #FFEDCF;
+  width: 50%;
+  height: 50%;
+  animation: small-input;
+  animation-duration: 1s;
+}
+
+.text-focus-in {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+@keyframes transform-title-result {
+  0% {
+    font-family: "bigShoulder";
+    font-size: 55px;
+    color: #254A46;
+  }
+
+  100% {
+    color: #254A46;
+    font-size: 24px;
+    font-family: "bigShoulder";
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes transform-title {
+  0% {
+    font-family: "bigShoulder";
+    color: #254A46;
+    font-size: 24px;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    font-family: "bigShoulder";
+    font-size: 55px;
+    color: #254A46;
+
+  }
+}
+
+@keyframes small-input {
+  0% {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  100% {
+    background-color: #FFEDCF;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@keyframes big-input {
+  0% {
+    background-color: #FFEDCF;
+    width: 50%;
+    height: 50%;
+  }
+
+  100% {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+
+    opacity: 0;
+  }
+
+  100% {
+
+    opacity: 1;
   }
 }
