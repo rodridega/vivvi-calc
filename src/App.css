@@ -64,6 +64,8 @@
   color: #254A46;
   animation: transform-title;
   animation-duration: 1s;
+  line-height: 1.15;
+  margin-top: 20px;
 }
 
 .left-box__title-result {
@@ -91,11 +93,11 @@
   color: #254A46;
 }
 
-.right-box__sub {
+/* .right-box__sub {
   font-family: "bigShoulderM";
   font-size: 20px;
   text-align: center;
-}
+} */
 
 .btn-vivvi {
   background-color: #254A46;
@@ -132,6 +134,8 @@
   background-color: #FFFFFF;
   padding: 4px;
   border-radius: 10px;
+  min-width: 170px;
+  
 }
 
 .form-control {
@@ -259,4 +263,81 @@
 
     opacity: 1;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .left-box {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 3em;
+    border-radius: 10px 10px 0px 0px;
+    min-height: 324px;
+  }
+
+  .left-box__title {
+    font-size: 36px;
+  }
+
+  @keyframes transform-title {
+    0% {
+    
+      font-size: 24px;
+    }
+  
+    100% {
+      
+      font-size: 36px;
+      
+  
+    }
+  }
+
+  .right-box {
+    width: 100%;
+    padding: 2em;
+    border-radius: 0px 0px 10px 10px
+  }
+
+  .right-box__title {
+    font-size: 24px;
+    margin: 1em;
+    text-align: center;
+  }
+
+  .right-box__title-result {
+    font-size: 16px;
+  }
+
+  .form-control:disabled {
+    width: 75%;
+    padding: 0 !important;
+  }
+
+  @keyframes small-input {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+
+  .resultado__title{
+    font-size: 18px;
+    text-align: start;
+    margin: 0;
+  }
+  .resultado__sub{
+    font-size: 12px;
+    text-align: start;
+    margin-bottom: 5px;
+  }
+  .resultado__total{
+    font-size: 21px;
+    padding: 0;
+    max-height: fit-content;
+    width: 123px;
+    height: 32px;
+  }
+  
 }
