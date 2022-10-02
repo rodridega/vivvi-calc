@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import separator from '../../constants/separator'
 import { WhatsappButton } from '../UI/WhatsappButton'
 import { Resultado } from './Resultado'
 
@@ -10,13 +11,14 @@ export const ResultadosLayout = ({ presupuesto, resultados }) => {
         remodelacion: 0
     })
 
+    
 
     useEffect(() => {
 
         setTotales({
-            vivienda: parseInt(presupuesto * 0.75),
-            ocultos: parseInt((presupuesto * 0.75) * 0.0337),
-            remodelacion: parseInt((presupuesto * 0.25) - (presupuesto * 0.75) * 0.0337),
+            vivienda: separator(parseInt(presupuesto * 0.75)) ,
+            ocultos: separator(parseInt((presupuesto * 0.75) * 0.0337)) ,
+            remodelacion: separator(parseInt((presupuesto * 0.25) - (presupuesto * 0.75) * 0.0337)) ,
         })
 
     }, [presupuesto])
