@@ -21,7 +21,7 @@ export const CalculadoraLayout = () => {
                             <WhatsappButton />
                         </div>
                         :
-                        <div className='left-box__text'>Calcula el valor al que debes comprar para remodelar con vivvidero, sólo ingresando el área y el presupuesto que tienes disponible.</div>
+                        <div className='left-box__text'>Calcula el valor al que debes comprar para remodelar con vivvidero, sólo ingresando el presupuesto que tienes disponible.</div>
                     }
                     {resultados && <div className='left-box__text d-md-none'>Calcula el valor al que debes comprar para remodelar con vivvidero, sólo ingresando el área y el presupuesto que tienes disponible.</div>}
                 </div>
