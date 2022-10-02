@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { ResultadosLayout } from './ResultadosLayout'
 import arrow from "../../assets/bx_arrow-back.svg"
 
@@ -18,7 +18,7 @@ export const Calculadora = ({ resultados, setResultados }) => {
 
     return (
         <div className='right-box d-flex flex-column align-items-center justify-content-center'>
-            {resultados && <img src={arrow} onClick={() => setResultados(false)} className="btn align-self-start text-focus-in" />}
+            {resultados && <img src={arrow} onClick={() => setResultados(false)} className="btn align-self-start text-focus-in" alt='Back' />}
             <h2 className={`right-box__title ${resultados ? "right-box__title-result" : ""}`}>¿QUÉ PRESUPUESTO TIENES PARA COMPRAR VIVIENDA?</h2>
 
             <form className='m-1 m-md-4  w-75 d-flex flex-column align-items-center justify-content-center'>
