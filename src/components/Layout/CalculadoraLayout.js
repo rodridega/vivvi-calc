@@ -10,7 +10,7 @@ export const CalculadoraLayout = () => {
         <div className='h-100 d-flex align-items-center justify-content-center  '>
             <div className='d-flex flex-column flex-md-row'  >
                 <div className='d-flex flex-column justify-content-between justify-content-md-evenly left-box' >
-                    <div> <img src={icon} className="my-2" /> </div>
+                    <div> <img src={icon} className="my-2" alt='home'/> </div>
                     <div className='left-box__sub'>SIMULADOR DE INVERSIÓN PARA COMPRAR Y REMODELAR</div>
                     <div className={resultados ? "left-box__title-result" : "left-box__title"}>
                         <p>Accede a mayor área</p>
